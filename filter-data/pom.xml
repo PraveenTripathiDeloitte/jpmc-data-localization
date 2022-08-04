@@ -80,9 +80,13 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <generateDirectory>${project.basedir}/src/main/java</generateDirectory>
                     <schemaDirectory>${project.basedir}/src/main/resources/</schemaDirectory>
                     <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
                     <clearOutputDir>false</clearOutputDir>
+                    <schemaIncludes>
+                        <include>data.wsdl</include>
+                    </schemaIncludes>
                 </configuration>
             </plugin>
         </plugins>

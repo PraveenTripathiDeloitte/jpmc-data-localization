@@ -6,7 +6,7 @@
 //
 
 
-package com.baeldung.springsoap.gen;
+package com.sample.filterdata.service;
 
 import javax.xml.bind.annotation.XmlRegistry;
 

@@ -33,8 +33,8 @@ public class WebServiceConfig {
         return wsdl11Definition;
     }
 
-    @Bean
-    public XsdSchema countriesSchema() {
-        return new SimpleXsdSchema(new ClassPathResource("data.xsd"));
-    }
+//    @Bean
+//    public XsdSchema countriesSchema() {
+//        return new SimpleXsdSchema(new ClassPathResource("data.xsd"));
+//    }
 }

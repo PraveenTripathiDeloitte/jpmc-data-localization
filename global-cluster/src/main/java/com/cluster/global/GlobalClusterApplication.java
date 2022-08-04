@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FilterDataApplication {
+public class GlobalClusterApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FilterDataApplication.class, args);
+		SpringApplication.run(GlobalClusterApplication.class, args);
 	}
 
 }
