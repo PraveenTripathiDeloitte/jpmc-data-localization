@@ -32,4 +32,6 @@ public class SoapClientConfig {
 //        countryClient.setUnmarshaller(jaxb2Marshaller);
 //        return countryClient;
 //    }
+
+//    public GetCou
 }
