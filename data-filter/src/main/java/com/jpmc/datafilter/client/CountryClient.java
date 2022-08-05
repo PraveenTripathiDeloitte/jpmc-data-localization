@@ -2,9 +2,6 @@ package com.jpmc.datafilter.client;
 
 import com.local.article.GetCountryRequest;
 import com.local.article.GetCountryResponse;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.oxm.jaxb.Jaxb2Marshaller;
-import org.springframework.ws.client.core.WebServiceTemplate;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 
 import java.util.regex.Pattern;
@@ -22,11 +19,16 @@ public class CountryClient extends WebServiceGatewaySupport {
         getCountryRequest.setBankId(bankId);
 //        webServiceTemplate = new WebServiceTemplate(jaxb2Marshaller);
         if (Pattern.compile(regex).matcher(bankId).find()) {
-            return (GetCountryResponse) getWebServiceTemplate().marshalSendAndReceive("http://localhost:8090/ws", getCountryRequest);
+            //for local
+//            return (GetCountryResponse) getWebServiceTemplate().marshalSendAndReceive("http://localhost:8090/ws", getCountryRequest);
+            //for deployed
+            return (GetCountryResponse) getWebServiceTemplate().marshalSendAndReceive("http://ec2-3-91-149-67.compute-1.amazonaws.com:8090/ws", getCountryRequest);
         } else {
-            return (GetCountryResponse) getWebServiceTemplate().marshalSendAndReceive("http://localhost:8089/ws", getCountryRequest);
+            //for local
+//            return (GetCountryResponse) getWebServiceTemplate().marshalSendAndReceive("http://localhost:8089/ws", getCountryRequest);
+            //for deployed
+            return (GetCountryResponse) getWebServiceTemplate().marshalSendAndReceive("http://ec2-54-165-252-134.compute-1.amazonaws.com:8089/ws", getCountryRequest);
         }
 
-//        return (GetCountryResponse) getWebServiceTemplate().marshalSendAndReceive(getCountryRequest);
     }
 }
