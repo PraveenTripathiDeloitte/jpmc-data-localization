@@ -14,9 +14,7 @@
 	<name>data-filter</name>
 	<description>Demo project for Spring Boot to filter data</description>
 	<properties>
-		<java.version>8</java.version>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -60,10 +58,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.jvnet.jaxb2.maven2</groupId>
@@ -85,25 +79,6 @@
 					</schemaIncludes>
 				</configuration>
 			</plugin>
-<!--			<plugin>-->
-<!--				<groupId>org.codehaus.mojo</groupId>-->
-<!--				<artifactId>jaxb2-maven-plugin</artifactId>-->
-<!--				<version>1.6</version>-->
-<!--				<executions>-->
-<!--					<execution>-->
-<!--						<id>xjc</id>-->
-<!--						<goals>-->
-<!--							<goal>xjc</goal>-->
-<!--						</goals>-->
-<!--					</execution>-->
-<!--				</executions>-->
-<!--				<configuration>-->
-<!--					<schemaDirectory>${project.basedir}/src/main/resources/</schemaDirectory>-->
-<!--					<outputDirectory>${project.basedir}/src/main/java</outputDirectory>-->
-<!--					<clearOutputDir>false</clearOutputDir>-->
-<!--				</configuration>-->
-<!--			</plugin>-->
-
 		</plugins>
 	</build>
 
