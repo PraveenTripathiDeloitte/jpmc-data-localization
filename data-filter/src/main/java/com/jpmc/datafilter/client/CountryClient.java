@@ -8,16 +8,11 @@ import java.util.regex.Pattern;
 
 public class CountryClient extends WebServiceGatewaySupport {
 
-//    @Autowired
-//    private Jaxb2Marshaller jaxb2Marshaller;
-
-//    private WebServiceTemplate webServiceTemplate;
 
     public GetCountryResponse getCountry(String bankId) {
         String regex = "[A-Z0-9]+CHE|DEL|BOM|BLR";
         GetCountryRequest getCountryRequest = new GetCountryRequest();
         getCountryRequest.setBankId(bankId);
-//        webServiceTemplate = new WebServiceTemplate(jaxb2Marshaller);
         if (Pattern.compile(regex).matcher(bankId).find()) {
             //for local
 //            return (GetCountryResponse) getWebServiceTemplate().marshalSendAndReceive("http://localhost:8090/ws", getCountryRequest);
